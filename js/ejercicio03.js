@@ -12,8 +12,8 @@ let apariciones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 document.write("<table border='1'>");
 document.write("<tr>");
-document.write("<th>Suma</th>");
-document.write("<th>Apariciones</th>");
+document.write("<th>Suma</th>")
+document.write("<th>Apariciones</th>")
 document.write("</tr>");
 
 for (let i = 0; i < 50; i++) {
@@ -31,7 +31,6 @@ for (let suma = 2; suma <= 12; suma++) {
 }
 
 document.write("</table>");
-
 
 
 
