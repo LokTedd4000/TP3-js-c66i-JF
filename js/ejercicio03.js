@@ -8,27 +8,30 @@ Ejemplo de salida:
 
 */
 
-let apariciones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let apariciones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 document.write("<table border='1'>");
 document.write("<tr>");
-document.write("<th>Suma</th>")
-document.write("<th>Apariciones</th>")
+document.write("<th>Suma</th>");
+document.write("<th>Apariciones</th>");
 document.write("</tr>");
 
 for (let i = 0; i < 50; i++) {
+    let dado1 = Math.ceil(Math.random() * 6);
+    let dado2 = Math.ceil(Math.random() * 6);
+    let suma = dado1 + dado2;
+    apariciones[suma - 2]++;
+}
 
-   let dado1 = Math.ceil(Math.random() * 6);
-   let dado2 = Math.ceil(Math.random() * 6);
-   let dados = dado1 + dado2;
-   apariciones[dados - 2]++;
-   document.write("<tr>");
-   document.write("<td>"+ total + "</td>");
-   document.write("<td>"+ apariciones[total-2] + "</td>");
-   document.write("</tr>")
+for (let suma = 2; suma <= 12; suma++) {
+    document.write("<tr>");
+    document.write("<td>" + suma + "</td>");
+    document.write("<td>" + apariciones[suma - 2] + "</td>");
+    document.write("</tr>");
 }
 
 document.write("</table>");
+
 
 
 
